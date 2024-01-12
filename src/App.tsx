@@ -1,7 +1,8 @@
 import { useState } from "react";
 import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
+import gitLogo from "/logo_git.png";
 import "./App.css";
+import DataAtual from "./components/DataAtual";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -9,8 +10,8 @@ function App() {
   return (
     <>
       <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
+        <a href="https://github.com/raqueldesa" target="_blank">
+          <img src={gitLogo} className="logo" alt="Git logo" />
         </a>
         <a href="https://react.dev" target="_blank">
           <img src={reactLogo} className="logo react" alt="React logo" />
@@ -20,8 +21,11 @@ function App() {
       <h1>{count}</h1>
       <h2>Recorde: {count}</h2>
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>count</button>
-        <p>{count}</p>
+        <button onClick={() => setCount((count) => count + 1)}>
+          Hoje eu Fui
+        </button>
+
+        <DataAtual />
       </div>
     </>
   );
